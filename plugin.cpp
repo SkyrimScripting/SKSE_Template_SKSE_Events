@@ -46,8 +46,11 @@ void MessageListener(SKSE::MessagingInterface::Message* message) {
         case SKSE::MessagingInterface::kDataLoaded:
             logger::info("DATA LOADED");
             break;
+        case SKSE::MessagingInterface::kTotal:
+            logger::info("TOTAL");
+            break;
         default:
-            logger::info("Unknown system message, maybe kTotal (9)? {}", message->type);
+            logger::info("Unknown system message of type: {}", message->type);
             break;
     }
 }
@@ -55,8 +58,6 @@ void MessageListener(SKSE::MessagingInterface::Message* message) {
 SKSEPluginLoad(const SKSE::LoadInterface* skse) {
     SKSE::Init(skse);
     SetupLog();
-
     SKSE::GetMessagingInterface()->RegisterListener(MessageListener);
-
     return true;
 }
