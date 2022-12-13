@@ -21,7 +21,7 @@ Events include things like:
 - player loaded a game
 - player deleted a game
 
-Read [`plugin.cpp`](plugin.cpp) for a bunch of details on what it's doing!
+Read [`plugin.cpp`](plugin.cpp) for details on what it's doing!
 
 ## Requirements
 
