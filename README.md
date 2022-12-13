@@ -1,4 +1,4 @@
-# SKSE - writing to log files
+# SKSE - System Events
 
 A simple SKSE plugin for Skyrim using:
 
@@ -11,15 +11,17 @@ A simple SKSE plugin for Skyrim using:
 
 ### What does it do?
 
-It writes to a log file.
+It writes to a log file whenever an SKSE "message" is sent telling the plugin about a system event.
+
+Events include things like:
+- all SKSE plugins have loaded
+- all .esp/.esm data has been loaded
+- player started a new game
+- player saved the game
+- player loaded a game
+- player deleted a game
 
 Read [`plugin.cpp`](plugin.cpp) for a bunch of details on what it's doing!
-
-I *highly recommend* you create a log file for your mod.
-
-It's useful for:
-- your own debugging, while developing the mod
-- debugging issues from your users (**ask your users to provide .log files in their bug reports on Nexus/GitHub!**)
 
 ## Requirements
 
