@@ -1,5 +1,7 @@
 #include <spdlog/sinks/basic_file_sink.h>
 
+namespace logger = SKSE::log;
+
 void SetupLog() {
     auto logsFolder = SKSE::log::log_directory();
     if (!logsFolder) {
@@ -15,8 +17,7 @@ void SetupLog() {
     spdlog::flush_on(spdlog::level::info);
 }
 
-namespace logger = SKSE::log;
-
+// For every message sent to the plugin by SKSE, log the message.
 void MessageListener(SKSE::MessagingInterface::Message* message) {
     switch (message->type) {
         case SKSE::MessagingInterface::kPostLoad:
@@ -58,6 +59,15 @@ void MessageListener(SKSE::MessagingInterface::Message* message) {
 SKSEPluginLoad(const SKSE::LoadInterface* skse) {
     SKSE::Init(skse);
     SetupLog();
+
+    // This is where the magic happens!
+    // See the MessageListener function above.
     SKSE::GetMessagingInterface()->RegisterListener(MessageListener);
+
+    // Note: you could also use a lambda function
+    // SKSE::GetMessagingInterface()->RegisterListener([](SKSE::MessagingInterface::Message* message){
+    //     logger::info("System Message type {}", message->type);
+    // });
+
     return true;
 }
