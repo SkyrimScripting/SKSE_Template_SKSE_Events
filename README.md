@@ -1,6 +1,6 @@
 > 📜 other templates available at https://github.com/SkyrimScripting/SKSE_Templates
 
-# SKSE - System Events
+# SKSE - SKSE Events
 
 A simple SKSE plugin for Skyrim using:
 
@@ -13,7 +13,7 @@ A simple SKSE plugin for Skyrim using:
 
 ## What does it do?
 
-It writes to a log file whenever an SKSE "message" is sent telling the plugin about a system event.
+It writes to a log file whenever an SKSE "message" is sent telling the plugin about an SKSE event.
 
 Events include things like:
 - all SKSE plugins have loaded
