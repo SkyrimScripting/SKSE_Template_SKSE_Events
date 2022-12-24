@@ -1,5 +1,11 @@
 > 📜 other templates available at https://github.com/SkyrimScripting/SKSE_Templates
 
+- [SKSE - SKSE Events](#skse---skse-events)
+  - [What does it do?](#what-does-it-do)
+  - [Requirements](#requirements)
+  - [Project setup](#project-setup)
+  - [Setup your own repository](#setup-your-own-repository)
+
 # SKSE - SKSE Events
 
 A simple SKSE plugin for Skyrim using:
