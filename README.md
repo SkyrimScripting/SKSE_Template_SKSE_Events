@@ -8,6 +8,8 @@
   - [Project setup](#project-setup)
   - [Setup your own repository](#setup-your-own-repository)
 
+---
+
 A simple SKSE plugin for Skyrim using:
 
 - C++
